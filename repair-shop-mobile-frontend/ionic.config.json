@@ -1,0 +1,7 @@
+{
+  "name": "repair-shop-mobile-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
