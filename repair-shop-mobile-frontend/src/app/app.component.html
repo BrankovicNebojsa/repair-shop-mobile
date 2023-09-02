@@ -1,3 +1,76 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Repair shop</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list lines="none">
+        <ion-menu-toggle>
+          <ion-item routerLink="/brands">
+            <ion-icon name="star-outline" slot="start"></ion-icon>
+            <ion-label>Brands</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/models">
+            <ion-icon name="keypad-outline" slot="start"></ion-icon>
+            <ion-label>Models</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/engines">
+            <ion-icon name="cog-outline" slot="start"></ion-icon>
+            <ion-label>Engines</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/cars">
+            <ion-icon name="car-sport-sharp" slot="start"></ion-icon>
+            <ion-label>Cars</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/reservations">
+            <ion-icon name="bookmarks-outline" slot="start"></ion-icon>
+            <ion-label>Reservations</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/prices">
+            <ion-icon name="card-outline" slot="start"></ion-icon>
+            <ion-label>Prices</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/profile">
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-label>Profile</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/log-in">
+            <ion-icon name="log-out" slot="start"></ion-icon>
+            <ion-label>Log out</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+  
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+
+
 </ion-app>

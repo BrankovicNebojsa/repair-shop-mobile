@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: BrandsPage
+  },
+  {
+    path: 'add',
+    loadChildren: () => import('./add/add.module').then( m => m.AddPageModule)
+  },
+  {
+    path: 'delete',
+    loadChildren: () => import('./delete/delete.module').then( m => m.DeletePageModule)
   }
 ];
 

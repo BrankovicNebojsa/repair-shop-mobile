@@ -1,11 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-brands',
-  templateUrl: './brands.page.html',
-  styleUrls: ['./brands.page.scss'],
+  selector: 'app-prices',
+  templateUrl: './prices.page.html',
+  styleUrls: ['./prices.page.scss'],
 })
-export class BrandsPage implements OnInit, OnDestroy {
+export class PricesPage implements OnInit, OnDestroy {
+
   constructor() {
     console.log('constructor');
   }
