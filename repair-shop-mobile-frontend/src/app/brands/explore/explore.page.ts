@@ -19,6 +19,9 @@ export class ExplorePage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ionViewWillEnter() {
     this.brandService.getBrands().subscribe((brandsData) => {
       console.log(brandsData);
       const brands: Brand[] = [];
