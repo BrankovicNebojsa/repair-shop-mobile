@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/brands/tabs/explore"></ion-back-button>
+    </ion-buttons>
+    <ion-title>brand-details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title>Brand details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="ion-padding">
+    <ion-card-header>
+      <ion-title>Brand</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <b>Name:</b> {{brand.name}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

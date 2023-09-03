@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
-  {
-    path: 'brands',
-    loadChildren: () => import('./brands/brands.module').then( m => m.BrandsPageModule)
-  },
   {
     path: '',
     redirectTo: 'brands',
     pathMatch: 'full'
+  },
+  {
+    path: 'brands',
+    loadChildren: () => import('./brands/brands.module').then( m => m.BrandsPageModule),
+    // canLoad: [AuthGuard]
   },
   {
     path: 'prices',
@@ -18,10 +20,6 @@ const routes: Routes = [
   {
     path: 'models',
     loadChildren: () => import('./models/models.module').then( m => m.ModelsPageModule)
-  },
-  {
-    path: 'log-in',
-    loadChildren: () => import('./log-in/log-in.module').then( m => m.LogInPageModule)
   },
   {
     path: 'cars',
@@ -38,6 +36,14 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'log-in',
+    loadChildren: () => import('./auth/log-in/log-in.module').then( m => m.LogInPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./auth/register/register.module').then( m => m.RegisterPageModule)
   },
 ];
 

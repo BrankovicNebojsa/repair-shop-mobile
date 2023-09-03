@@ -1,0 +1,379 @@
+[
+  {
+    "currentUser": {
+      "id": 252,
+      "firstName": "Melani",
+      "lastName": "Mrkela",
+      "email": "m.mrkela99@gmail.com",
+      "phoneNumber": "+381 61 361 3812",
+      "username": "melani",
+      "password": "$2a$10$nRMy.pAJyPpL/.E12RzHqOtdEE99pNX0RMgPJ4ZwnbyFqgMwUmFui",
+      "role": "CLIENT"
+    },
+    "message": "Saved a brand: Brand(id\u003d952, name\u003d3213dsa)"
+  },
+  {
+    "currentUser": {
+      "id": 252,
+      "firstName": "Melani",
+      "lastName": "Mrkela",
+      "email": "m.mrkela99@gmail.com",
+      "phoneNumber": "+381 61 361 3812",
+      "username": "melani",
+      "password": "$2a$10$nRMy.pAJyPpL/.E12RzHqOtdEE99pNX0RMgPJ4ZwnbyFqgMwUmFui",
+      "role": "CLIENT"
+    },
+    "message": "Saved a brand: Brand(id\u003d953, name\u003dMaserati)"
+  },
+  {
+    "currentUser": {
+      "id": 252,
+      "firstName": "Melani",
+      "lastName": "Mrkela",
+      "email": "m.mrkela99@gmail.com",
+      "phoneNumber": "+381 61 361 3812",
+      "username": "melani",
+      "password": "$2a$10$nRMy.pAJyPpL/.E12RzHqOtdEE99pNX0RMgPJ4ZwnbyFqgMwUmFui",
+      "role": "CLIENT"
+    },
+    "message": "Saved a brand: Brand(id\u003d1002, name\u003dMaserati2)"
+  },
+  {
+    "currentUser": {
+      "id": 252,
+      "firstName": "Melani",
+      "lastName": "Mrkela",
+      "email": "m.mrkela99@gmail.com",
+      "phoneNumber": "+381 61 361 3812",
+      "username": "melani",
+      "password": "$2a$10$nRMy.pAJyPpL/.E12RzHqOtdEE99pNX0RMgPJ4ZwnbyFqgMwUmFui",
+      "role": "CLIENT"
+    },
+    "message": "Saved a brand: Brand{id\u003d1052, name\u003dMaserati3}"
+  },
+  {
+    "currentUser": {
+      "id": 252,
+      "firstName": "Melani",
+      "lastName": "Mrkela",
+      "email": "m.mrkela99@gmail.com",
+      "phoneNumber": "+381 61 361 3812",
+      "username": "melani",
+      "password": "$2a$10$nRMy.pAJyPpL/.E12RzHqOtdEE99pNX0RMgPJ4ZwnbyFqgMwUmFui",
+      "role": "CLIENT"
+    },
+    "message": "Saved a brand: Brand"
+  },
+  {
+    "currentUser": {
+      "id": 252,
+      "firstName": "Melani",
+      "lastName": "Mrkela",
+      "email": "m.mrkela99@gmail.com",
+      "phoneNumber": "+381 61 361 3812",
+      "username": "melani",
+      "password": "$2a$10$nRMy.pAJyPpL/.E12RzHqOtdEE99pNX0RMgPJ4ZwnbyFqgMwUmFui",
+      "role": "CLIENT"
+    },
+    "message": "Saved a brand: Brand{ id: 1152 name: Mas}"
+  },
+  {
+    "currentUser": {
+      "id": 252,
+      "firstName": "Melani",
+      "lastName": "Mrkela",
+      "email": "m.mrkela99@gmail.com",
+      "phoneNumber": "+381 61 361 3812",
+      "username": "melani",
+      "password": "$2a$10$nRMy.pAJyPpL/.E12RzHqOtdEE99pNX0RMgPJ4ZwnbyFqgMwUmFui",
+      "role": "CLIENT"
+    },
+    "message": "Saved a model: Model{id: 402, name: A7, brand {Brand{ id: 9 name: Audi}}}"
+  },
+  {
+    "currentUser": {
+      "id": 252,
+      "firstName": "Melani",
+      "lastName": "Mrkela",
+      "email": "m.mrkela99@gmail.com",
+      "phoneNumber": "+381 61 361 3812",
+      "username": "melani",
+      "password": "$2a$10$nRMy.pAJyPpL/.E12RzHqOtdEE99pNX0RMgPJ4ZwnbyFqgMwUmFui",
+      "role": "CLIENT"
+    },
+    "message": "Saved an engine: Engine{id: 452, numberOfCylinders:16, power:1000, capacity:6000.0}"
+  },
+  {
+    "currentUser": {
+      "id": 252,
+      "firstName": "Melani",
+      "lastName": "Mrkela",
+      "email": "m.mrkela99@gmail.com",
+      "phoneNumber": "+381 61 361 3812",
+      "username": "melani",
+      "password": "$2a$10$nRMy.pAJyPpL/.E12RzHqOtdEE99pNX0RMgPJ4ZwnbyFqgMwUmFui",
+      "role": "CLIENT"
+    },
+    "message": "Saved a reservation: Reservation{id: 952, date: Tue Dec 26 11:00:00 CET 2023, car {Car{id: 2, licensePlate: BG977MI, year: 2012, engineNumber: xdn3178fg13, chassisNumber: xdj3819fg01h9f1, color: GREY, transmission: AUTOMATIC, model {Model{id: 5, name: Octavia, brand {Brand{ id: 12 name: Skoda}}} }, engine { Engine{id: 2, numberOfCylinders:4, power:140, capacity:1968.0} }, owner {User{id: 2, firstName: Zoran, lastName: Brankovic, email: z.brankovic99@gmail.com, phoneNumber: +381 62 321 3812, username: z.brankovic99@gmail.com, password: $2a$10$nI354orltWmKI/z1KtajmeKkFoiiHLJLtZU.ckmwTDmbXCxDbIgAm, role: CLIENT} } }}, mechanic {User{id: 453, firstName: Ljiljana, lastName: Brankovic, email: ljilja50@gmail.com, phoneNumber: +381 63 326 3812, username: ljiljana, password: $2a$10$14cJsI5Hc9S5n0hSYJ2EyuCMIv655TIVwieK/lcyWKPkTI1n5LLCC, role: WORKER}}}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 1, nameOfService: Oil change, price:5999.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 2, nameOfService: Computer Diagnostics, price:10999.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 3, nameOfService: Filter change, price:3499.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 4, nameOfService: Radiator Flush, price:6349.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 5, nameOfService: Transmission Fluid Service, price:4249.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 6, nameOfService: A/C Recharge \u0026 Diagnostic Service, price:8749.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 7, nameOfService: Timing Belt Replacement, price:13249.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 8, nameOfService: Tire rotation and balance only, price:4749.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 9, nameOfService: Battery replacement, price:24249.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 10, nameOfService: Anti-Lock system diagnosis, price:3499.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 11, nameOfService: Axle Work Bearings/Seals, price:14299.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 12, nameOfService: Shock and Strut Replacement, price:9999.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 13, nameOfService: Changing an Alternator, price:16299.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 14, nameOfService: Suspension system service, price:6299.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 15, nameOfService: Alignments, price:1999.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 16, nameOfService: Anti-Lock system diagnosis, price:3999.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a price: Price{id: 17, nameOfService: Fleet service/maintenance, price:6799.99}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a reservation: Reservation{id: 1002, date: Fri Jan 12 11:00:00 CET 2024, car {Car{id: 3, licensePlate: BG2312XT, year: 2014, engineNumber: xsdn3178fg13, chassisNumber: xdsj3819fg01h9f1, color: BLACK, transmission: AUTOMATIC, model {Model{id: 1, name: A4, brand {Brand{ id: 9 name: Audi}}} }, engine { Engine{id: 3, numberOfCylinders:4, power:177, capacity:1968.0} }, owner {User{id: 3, firstName: Ilija, lastName: Teofilovic, email: ilija.teofilovic@gmail.com, phoneNumber: +381 65 321 3812, username: ilija.teofilovic@gmail.com, password: $2a$10$V6YiB6K9zIUv4WdkcdvRfexm6iL9ceVA3YNOtlSm6ZT20wDj8IdjG, role: CLIENT} } }}, mechanic {User{id: 602, firstName: Nebojsa, lastName: Brankovic, email: n.brankovic99@gmail.com, phoneNumber: +381 63 321 3812, username: nebojsa, password: $2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76, role: WORKER}}}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a reservation: Reservation{id: 1003, date: Thu Dec 12 10:00:00 CET 2024, car {Car{id: 3, licensePlate: BG2312XT, year: 2014, engineNumber: xsdn3178fg13, chassisNumber: xdsj3819fg01h9f1, color: BLACK, transmission: AUTOMATIC, model {Model{id: 1, name: A4, brand {Brand{ id: 9 name: Audi}}} }, engine { Engine{id: 3, numberOfCylinders:4, power:177, capacity:1968.0} }, owner {User{id: 3, firstName: Ilija, lastName: Teofilovic, email: ilija.teofilovic@gmail.com, phoneNumber: +381 65 321 3812, username: ilija.teofilovic@gmail.com, password: $2a$10$V6YiB6K9zIUv4WdkcdvRfexm6iL9ceVA3YNOtlSm6ZT20wDj8IdjG, role: CLIENT} } }}, mechanic {User{id: 602, firstName: Nebojsa, lastName: Brankovic, email: n.brankovic99@gmail.com, phoneNumber: +381 63 321 3812, username: nebojsa, password: $2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76, role: WORKER}}}"
+  },
+  {
+    "currentUser": {
+      "id": 602,
+      "firstName": "Nebojsa",
+      "lastName": "Brankovic",
+      "email": "n.brankovic99@gmail.com",
+      "phoneNumber": "+381 63 321 3812",
+      "username": "nebojsa",
+      "password": "$2a$10$Nezdg0gMl.SfvkRH5j6WpO6qTnEeeDOnPErEycSLrNKwJkjGWWO76",
+      "role": "WORKER"
+    },
+    "message": "Saved a reservation: Reservation{id: 1004, date: Fri Jan 12 09:00:00 CET 2024, car {Car{id: 152, licensePlate: BG1462OX, year: 2017, engineNumber: xzdn3178fg13, chassisNumber: xzdj3819fg01h9f1, color: GREEN, transmission: MANUAL, model {Model{id: 102, name: I30, brand {Brand{ id: 103 name: Hyundai}}} }, engine { Engine{id: 152, numberOfCylinders:4, power:110, capacity:1300.0} }, owner {User{id: 152, firstName: Nikola, lastName: Brankovic, email: n.brankovic97@gmail.com, phoneNumber: +381 66 321 3812, username: nikola.brankovic, password: $2a$10$yhI.Hn6AK8bBRYtRv/JS6eiXNZrrioU5YtoRzGxPV9OKVKi03dhq2, role: CLIENT} } }}, mechanic {User{id: 352, firstName: Danilo, lastName: Vorkapic, email: vorkapic99@gmail.com, phoneNumber: +381 66 321 3812, username: danilo2, password: $2a$10$mWkU0S4EJ5MyAGNH25IVHO24m0b43jQAyF8UNhz0TfqjtQkP7g07m, role: WORKER}}}"
+  }
+]

@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button size="small" color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Explore</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <app-brand-element *ngFor="let brand of brands" [brand]="brand"></app-brand-element>
+  </ion-list>
+</ion-content>
