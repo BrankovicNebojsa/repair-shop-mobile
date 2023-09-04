@@ -18,23 +18,11 @@ export class ExplorePage implements OnInit {
     this.brands = this.brandService.brands;
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  ionViewDidEnter() {
-    this.brandService.getBrands().subscribe((brandsData) => {
-      const brands: Brand[] = [];
-
-      for (const key in brandsData) {
-        if (brandsData.hasOwnProperty(key)) {
-          brands.push({
-            id: key,
-            name: brandsData[key].name,
-          });
-        }
-      }
+  ionViewWillEnter() {
+    this.brandService.getBrands().subscribe((brands) => {
       this.brands = brands;
     });
-    this.brandService.setBrands();
   }
 }
