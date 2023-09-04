@@ -13,10 +13,6 @@ const routes: Routes = [
         loadChildren: () => import('./add/add.module').then( m => m.AddPageModule)
       },
       {
-        path: 'delete',
-        loadChildren: () => import('./delete/delete.module').then( m => m.DeletePageModule)
-      },
-      {
         path: 'explore',
         loadChildren: () => import('./explore/explore.module').then( m => m.ExplorePageModule)
       },
@@ -31,7 +27,9 @@ const routes: Routes = [
     path: '',
     redirectTo: '/brands/tabs/explore',
     pathMatch: 'full'
-  }
+  },
+ 
+
 
 ];
 

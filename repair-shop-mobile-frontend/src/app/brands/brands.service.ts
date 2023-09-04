@@ -110,4 +110,24 @@ export class BrandsService {
         })
       );
   }
+
+  editBrand(brandId: string, name: string, userId: string) {
+    return this.http
+      .put(`${environment.firebaseRealtimeDatabaseUrl}/quotes/${brandId}.json?auth=${this.authService.getToken()}`,
+        {name, userId})
+      .pipe(
+        switchMap(() => this.brands),
+        take(1),
+        tap((brands) => {
+          const updatedBrandIndex = brands.findIndex((q) => q.id === brandId);
+          const updatedBrands = [...brands];
+          updatedBrands[updatedBrandIndex] = new Brand(
+            brandId,
+            name,
+            userId
+          );
+          this._brands.next(updatedBrands);
+        })
+      );
+  }
 }
