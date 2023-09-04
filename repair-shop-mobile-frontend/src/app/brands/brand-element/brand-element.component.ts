@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Brand } from '../brand.model';
 import { AlertController } from '@ionic/angular';
+import { BrandsService } from '../brands.service';
 
 @Component({
   selector: 'app-brand-element',
@@ -11,7 +12,7 @@ export class BrandElementComponent  implements OnInit {
 
   @Input() brand: Brand = {id: '4', name: "VW"};
 
-  constructor(private alertController: AlertController) { }
+  constructor(private alertController: AlertController, private brandService: BrandsService) { }
 
   ngOnInit() {}
 
@@ -23,6 +24,7 @@ export class BrandElementComponent  implements OnInit {
         {
           text: "Delete",
           handler: () => {
+            this.brandService.deleteBrand(this.brand.id);
             console.log("Deleted!");
           }
         },

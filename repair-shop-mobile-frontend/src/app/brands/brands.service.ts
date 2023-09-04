@@ -11,14 +11,9 @@ interface BrandData {
   providedIn: 'root',
 })
 export class BrandsService {
-  _brands: Brand[] = [
-    { id: '1', name: 'Audi' },
-    { id: '2', name: 'BMW' },
-    { id: '3', name: 'Mercedes-Benz' },
-  ];
+  _brands: Brand[] = [];
 
   constructor(private http: HttpClient) {
-    // this.setBrands();
     this.getBrands();
   }
 
@@ -68,5 +63,10 @@ export class BrandsService {
 
   getBrand(id: string) {
     return this._brands.find((b) => b.id === id);
+  }
+
+  deleteBrand(id: string) {
+    this.http.delete('https://repair-shop-87578-default-rtdb.europe-west1.firebasedatabase.app/brands.json/{{id}}')
+        .subscribe(() => console.log('Delete successful'));  
   }
 }

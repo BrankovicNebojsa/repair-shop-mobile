@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'repair-shop-mobile-frontend',
+  appId: 'com.repair-shop',
+  appName: 'Repair Shop',
   webDir: 'www',
   server: {
     androidScheme: 'https'

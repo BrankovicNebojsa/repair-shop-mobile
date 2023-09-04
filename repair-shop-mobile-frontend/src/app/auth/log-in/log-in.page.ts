@@ -25,8 +25,7 @@ export class LogInPage implements OnInit {
 
   onLogIn() {
     console.log(this.logInForm);
-    // this.authService.logIn();
-    // this.router.navigateByUrl('/brands/tabs/explore');
+    this.authService.logIn();
+    this.router.navigateByUrl('/brands/tabs/explore');
   }
-  
 }
