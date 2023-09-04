@@ -113,7 +113,7 @@ export class BrandsService {
 
   editBrand(brandId: string, name: string, userId: string) {
     return this.http
-      .put(`${environment.firebaseRealtimeDatabaseUrl}/quotes/${brandId}.json?auth=${this.authService.getToken()}`,
+      .put(`${environment.firebaseRealtimeDatabaseUrl}/brands/${brandId}.json?auth=${this.authService.getToken()}`,
         {name, userId})
       .pipe(
         switchMap(() => this.brands),
@@ -130,4 +130,5 @@ export class BrandsService {
         })
       );
   }
+  
 }

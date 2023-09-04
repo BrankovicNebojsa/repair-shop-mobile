@@ -32,7 +32,7 @@ export class RegisterPage implements OnInit {
 
   onRegister() {
     if (this.registerForm.valid) {
-      console.log("Valid");
+      console.log('Valid');
       this.loadingController
         .create({ message: 'Registering...' })
         .then((loadingEl) => {
@@ -42,10 +42,14 @@ export class RegisterPage implements OnInit {
             .subscribe((resData) => {
               console.log('Registration complete!');
               console.log(resData);
+              loadingEl.dismiss();
+              this.router.navigateByUrl('brands');
             });
-          loadingEl.dismiss();
-          this.router.navigateByUrl('brands');
         });
     }
+  }
+
+  onSignIn() {
+    this.router.navigateByUrl('/log-in');
   }
 }

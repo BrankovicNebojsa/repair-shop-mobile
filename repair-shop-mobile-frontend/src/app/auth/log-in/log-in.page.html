@@ -35,6 +35,14 @@
           <ion-button type="submit" expand="block" [disabled]="logInForm.invalid" *ngIf="!isLoading">Log in</ion-button>
         </ion-col>
       </ion-row>
+      <ion-row>
+        <ion-col size="6" offset="3">
+          <div class="ion-text-center">
+            <p>Don't have an account?</p>
+          </div>
+          <ion-button expand="block" (click)="onSignUp()">Sign up</ion-button>
+        </ion-col>
+      </ion-row>
     </ion-grid>
   </form>
 </ion-content>

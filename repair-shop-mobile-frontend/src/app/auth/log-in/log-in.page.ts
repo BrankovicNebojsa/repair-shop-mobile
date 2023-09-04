@@ -34,4 +34,8 @@ export class LogInPage implements OnInit {
       this.router.navigateByUrl('/brands/tabs/explore');
     });
   }
+
+  onSignUp() {
+    this.router.navigateByUrl('/register');
+  }
 }
