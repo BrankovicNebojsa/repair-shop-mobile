@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'brands',
     loadChildren: () => import('./brands/brands.module').then( m => m.BrandsPageModule),
-    // canLoad: [AuthGuard]
+    canLoad: [AuthGuard]
   },
   {
     path: 'prices',

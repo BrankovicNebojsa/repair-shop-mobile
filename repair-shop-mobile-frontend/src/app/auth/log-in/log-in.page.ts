@@ -9,6 +9,7 @@ import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
   styleUrls: ['./log-in.page.scss'],
 })
 export class LogInPage implements OnInit {
+  isLoading = false;
   logInForm: FormGroup;
 
   constructor(private authService: AuthService, private router: Router) {
@@ -24,8 +25,13 @@ export class LogInPage implements OnInit {
   ngOnInit() {}
 
   onLogIn() {
+    this.isLoading = true;
     console.log(this.logInForm);
-    this.authService.logIn();
-    this.router.navigateByUrl('/brands/tabs/explore');
+    this.authService.logIn(this.logInForm.value).subscribe((resData) => {
+      console.log('Log in completed!');
+      console.log(resData);
+      this.isLoading = false;
+      this.router.navigateByUrl('/brands/tabs/explore');
+    });
   }
 }

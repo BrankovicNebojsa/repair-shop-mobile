@@ -10,22 +10,24 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./explore.page.scss'],
 })
 export class ExplorePage implements OnInit, OnDestroy {
-  brands: Brand[];
+  brands: Brand[] | undefined;
   private brandSub: Subscription | undefined;
 
   constructor(
     private menuCtr: MenuController,
     private brandService: BrandsService
   ) {
-    this.brands = this.brandService.brands;
+    // this.brands = this.brandService.brands;
   }
 
-  ngOnInit() {}
-
-  ionViewWillEnter() {
-    this.brandSub = this.brandService.getBrands().subscribe((brands) => {
+  ngOnInit() {
+    this.brandSub = this.brandService.brands.subscribe((brands) => {
       this.brands = brands;
     });
+  }
+
+  ionViewWillEnter() {
+    this.brandService.getBrands().subscribe((brands) => {});
   }
 
   ngOnDestroy() {

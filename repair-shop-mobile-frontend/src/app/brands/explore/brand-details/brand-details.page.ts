@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Brand } from '../../brand.model';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { BrandsService } from '../../brands.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-brand-details',
@@ -13,12 +14,27 @@ export class BrandDetailsPage implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private navCtrl: NavController,
     private brandService: BrandsService
   ) {
-    this.brand = this.brandService.getBrand(
-      this.route.snapshot.params?.['brandId']
-    )!;
+    console.log(
+      this.brandService.getBrand(this.route.snapshot.params?.['brandId'])
+    );
+    this.brand = new Brand('1', 'Audi', 'nesto');
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.paramMap.subscribe((paramMap) => {
+      if (!paramMap.has('brandId')) {
+        this.navCtrl.navigateBack('/brands/tabs/explore');
+        return;
+      }
+
+      this.brandService
+        .getBrand(paramMap.get('brandId'))
+        .subscribe((brand) => {
+          this.brand = brand;
+        });
+    });
+  }
 }
