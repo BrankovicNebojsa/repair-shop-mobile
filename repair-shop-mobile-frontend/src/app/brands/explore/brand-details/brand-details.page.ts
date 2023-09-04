@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Brand } from '../../brand.model';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { BrandsService } from '../../brands.service';
-import { ExplorePage } from '../explore.page';
 
 @Component({
   selector: 'app-brand-details',
@@ -16,9 +15,10 @@ export class BrandDetailsPage implements OnInit {
     private route: ActivatedRoute,
     private brandService: BrandsService
   ) {
-    this.brand = this.brandService.getBrand(this.route.snapshot.params?.['brandId'])!;
+    this.brand = this.brandService.getBrand(
+      this.route.snapshot.params?.['brandId']
+    )!;
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

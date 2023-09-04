@@ -21,9 +21,8 @@ export class ExplorePage implements OnInit {
   ngOnInit() {
   }
 
-  ionViewWillEnter() {
+  ionViewDidEnter() {
     this.brandService.getBrands().subscribe((brandsData) => {
-      console.log(brandsData);
       const brands: Brand[] = [];
 
       for (const key in brandsData) {
@@ -36,5 +35,6 @@ export class ExplorePage implements OnInit {
       }
       this.brands = brands;
     });
+    this.brandService.setBrands();
   }
 }

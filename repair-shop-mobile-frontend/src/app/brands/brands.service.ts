@@ -22,14 +22,13 @@ export class BrandsService {
 
   addBrand(name: string) {
     return this.http.post<{ name: string }>(
-      `http://localhost:8080/api/v1/brands`,
+      `https://repair-shop-87578-default-rtdb.europe-west1.firebasedatabase.app/brands.json`,
       { name }
     );
   }
 
   setBrands() {
     this.getBrands().subscribe((brandsData) => {
-      console.log(brandsData);
       const brands: Brand[] = [];
 
       for (const key in brandsData) {
@@ -46,7 +45,7 @@ export class BrandsService {
 
   getBrands() {
     return this.http.get<{ [key: number]: BrandData }>(
-      `http://localhost:8080/api/v1/brands`
+      `https://repair-shop-87578-default-rtdb.europe-west1.firebasedatabase.app/brands.json`
     );
   }
 

@@ -23,5 +23,12 @@ export class AddPage implements OnInit {
     this.brandsService.addBrand(this.addBrandForm.get('name')?.value).subscribe((res) => {
       console.log(res);
     });
+    this.resetForm();
+  }
+
+  resetForm() {
+    this.addBrandForm = new FormGroup({
+      name: new FormControl(null, Validators.required),
+    });
   }
 }

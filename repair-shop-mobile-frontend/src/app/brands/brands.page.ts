@@ -5,32 +5,10 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   templateUrl: './brands.page.html',
   styleUrls: ['./brands.page.scss'],
 })
-export class BrandsPage implements OnInit, OnDestroy {
+export class BrandsPage implements OnInit {
   constructor() {
-    console.log('constructor');
   }
 
   ngOnInit() {
-    console.log('ngOnInit');
-  }
-
-  ionViewWillEnter() {
-    console.log('ionViewWillEnter');
-  }
-
-  ionViewDidEnter() {
-    console.log('ionViewDidEnter');
-  }
-
-  ionViewWillLeave() {
-    console.log('ionViewWillLeave');
-  }
-
-  ionViewDidLeave() {
-    console.log('ionViewDidLeave');
-  }
-
-  ngOnDestroy() {
-    console.log('ngOnDestroy');
   }
 }
