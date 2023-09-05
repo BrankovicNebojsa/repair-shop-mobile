@@ -1,0 +1,6 @@
+<ion-item>
+  <ion-item [routerLink]="service.id">
+    <ion-label>{{ service.name }}</ion-label>
+  </ion-item>
+  <ion-icon name="trash" slot="end" (click)="openAlert()"></ion-icon>
+</ion-item>
