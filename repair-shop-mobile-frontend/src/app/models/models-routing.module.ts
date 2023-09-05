@@ -5,17 +5,31 @@ import { ModelsPage } from './models.page';
 
 const routes: Routes = [
   {
+    path: 'tabs',
+    component: ModelsPage,
+    children: [
+      {
+        path: 'add',
+        loadChildren: () =>
+          import('./add/add.module').then((m) => m.AddPageModule),
+      },
+      {
+        path: 'explore',
+        loadChildren: () =>
+          import('./explore/explore.module').then((m) => m.ExplorePageModule),
+      },
+      {
+        path: '',
+        redirectTo: '/models/tabs/explore',
+        pathMatch: 'full',
+      },
+    ],
+  },
+  {
     path: '',
-    component: ModelsPage
+    redirectTo: '/models/tabs/explore',
+    pathMatch: 'full',
   },
-  {
-    path: 'add',
-    loadChildren: () => import('./add/add.module').then( m => m.AddPageModule)
-  },
-  {
-    path: 'explore',
-    loadChildren: () => import('./explore/explore.module').then( m => m.ExplorePageModule)
-  }
 ];
 
 @NgModule({

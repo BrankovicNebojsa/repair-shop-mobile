@@ -24,10 +24,10 @@ export class ReservationModalComponent implements OnInit {
     private reservationService: ReservationsService
   ) {
     this.editReservationForm = new FormGroup({
-      date: new FormControl('', [Validators.required]),
-      license_plate: new FormControl('', [Validators.required]),
-      description: new FormControl('', [Validators.required]),
-      mechanic_name: new FormControl('', [Validators.required]),
+      date: new FormControl(null, [Validators.required]),
+      license_plate: new FormControl(null, [Validators.required]),
+      description: new FormControl(null, [Validators.required]),
+      mechanic_name: new FormControl(null, [Validators.required]),
     });
     this.reservation = new Reservation(
       '1',

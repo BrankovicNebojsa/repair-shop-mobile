@@ -24,8 +24,8 @@ export class ServiceModalComponent implements OnInit {
     private serviceService: ServicesService
   ) {
     this.editServiceForm = new FormGroup({
-      name: new FormControl('', [Validators.required]),
-      price: new FormControl('', [Validators.required]),
+      name: new FormControl(null, [Validators.required]),
+      price: new FormControl(null, [Validators.required]),
     });
     this.service = new Service('1', 'Oil change', '79.99', '1');
   }

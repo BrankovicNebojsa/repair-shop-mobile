@@ -1,13 +1,47 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>add</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Add model</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">add</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <form [formGroup]="addModelForm" (ngSubmit)="onAddModel()">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Brand name</ion-label>
+            <ion-input type="text" formControlName="brand_name"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="addModelForm.get('brand_name')?.invalid && addModelForm.get('brand_name')?.touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add a brand name!</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Model name</ion-label>
+            <ion-input type="text" formControlName="model_name"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="addModelForm.get('model_name')?.invalid && addModelForm.get('model_name')?.touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add a model name!</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-button type="submit" expand="block" [disabled]="addModelForm.invalid">Add</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
 </ion-content>

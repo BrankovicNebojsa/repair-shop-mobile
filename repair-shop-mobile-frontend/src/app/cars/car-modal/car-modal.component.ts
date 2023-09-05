@@ -25,14 +25,14 @@ export class CarModalComponent implements OnInit {
     private carService: CarsService
   ) {
     this.editCarForm = new FormGroup({
-      license_plate: new FormControl('', [Validators.required]),
-      brand_name: new FormControl('', [Validators.required]),
-      model_name: new FormControl('', [Validators.required]),
-      year: new FormControl('', [Validators.required]),
+      license_plate: new FormControl(null, [Validators.required]),
+      brand_name: new FormControl(null, [Validators.required]),
+      model_name: new FormControl(null, [Validators.required]),
+      year: new FormControl(null, [Validators.required]),
       transmission: new FormControl('', [Validators.required]),
-      color: new FormControl('', [Validators.required]),
-      engine_horse_power: new FormControl('', [Validators.required]),
-      engine_capacity: new FormControl('', [Validators.required]),
+      color: new FormControl(null, [Validators.required]),
+      engine_horse_power: new FormControl(null, [Validators.required]),
+      engine_capacity: new FormControl(null, [Validators.required]),
     });
     this.car = new Car(
       '1',

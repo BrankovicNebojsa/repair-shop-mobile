@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ExplorePageRoutingModule } from './explore-routing.module';
 
 import { ExplorePage } from './explore.page';
+import { ModelElementComponent } from '../model-element/model-element.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ExplorePage } from './explore.page';
     IonicModule,
     ExplorePageRoutingModule
   ],
-  declarations: [ExplorePage]
+  declarations: [ExplorePage, ModelElementComponent]
 })
 export class ExplorePageModule {}

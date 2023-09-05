@@ -9,7 +9,7 @@ const routes: Routes = [
     component: ExplorePage
   },
   {
-    path: 'model-details',
+    path: ':modelId',
     loadChildren: () => import('./model-details/model-details.module').then( m => m.ModelDetailsPageModule)
   }
 ];

@@ -1,3 +1,6 @@
-<p>
-  model-element works!
-</p>
+<ion-item>
+  <ion-item [routerLink]="model.id">
+    <ion-label>{{ model.brand_name }} {{model.model_name}}</ion-label>
+  </ion-item>
+  <ion-icon name="trash" slot="end" (click)="openAlert()"></ion-icon>
+</ion-item>

@@ -1,3 +1,40 @@
-<p>
-  model-modal works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onCancel()" color="dark">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+  <form [formGroup]="editModelForm" (ngSubmit)="onSubmit()">
+    <ion-grid>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Brand name</ion-label>
+            <ion-input type="text" formControlName="brand_name"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Model name</ion-label>
+            <ion-input type="text" formControlName="model_name"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col size="6" offset="3">
+          <ion-button type="submit" expand="block" [disabled]="editModelForm.invalid">Update model</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
