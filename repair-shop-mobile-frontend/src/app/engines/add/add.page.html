@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Add engine</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="addEngineForm" (ngSubmit)="onAddEngine()">
+    <ion-grid>
+      <ion-col size-sm="3" offset-sm="3">
+        <ion-item>
+          <ion-label position="floating">Engine power</ion-label>
+          <ion-input type="text" formControlName="horse_power"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-row
+        *ngIf="addEngineForm.get('horse_power')?.invalid && addEngineForm.get('horse_power')?.touched"
+      >
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add engine horse power!</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Engine capacity</ion-label>
+            <ion-input
+              type="text"
+              formControlName="engine_capacity"
+            ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        *ngIf="addEngineForm.get('engine_capacity')?.invalid && addEngineForm.get('engine_capacity')?.touched"
+      >
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add engine capcity!</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Number of cylinders</ion-label>
+            <ion-input
+              type="text"
+              formControlName="number_of_cylinders"
+            ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        *ngIf="addEngineForm.get('number_of_cylinders')?.invalid && addEngineForm.get('number_of_cylinders')?.touched"
+      >
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add number of cylinders!</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-button
+            type="submit"
+            expand="block"
+            [disabled]="addEngineForm.invalid"
+            >Add</ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
