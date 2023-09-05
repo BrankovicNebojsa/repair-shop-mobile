@@ -25,9 +25,9 @@ interface UserData {
   providedIn: 'root',
 })
 export class AuthService {
-  private _user = new BehaviorSubject<User|null>(null);
+  private _user = new BehaviorSubject<User | null>(null);
   private _isUserAuthenticated = false;
-  private _token: string|null = "Empty";
+  private _token: string | null = 'Empty';
 
   constructor(private http: HttpClient) {}
 
@@ -54,6 +54,10 @@ export class AuthService {
         }
       })
     );
+  }
+
+  get user() {
+    return this._user;
   }
 
   get token() {
