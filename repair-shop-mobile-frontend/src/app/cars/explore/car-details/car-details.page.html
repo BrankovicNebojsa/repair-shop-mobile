@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/cars/tabs/explore"></ion-back-button>
+    </ion-buttons>
+    <ion-title>car-details</ion-title>
+    <ion-buttons slot="end">
+      <ion-fab-button size="small" color="dark" (click)="onEditCar()">
+        <ion-icon name="pencil"></ion-icon>
+      </ion-fab-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title>Car details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="ion-padding">
+    <ion-card-header>
+      <ion-title>Car</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <b>License plate:</b> {{car.license_plate}}
+      <br />
+      <b>Brand name:</b> {{car.brand_name}}
+      <br />
+      <b>Model name:</b> {{car.model_name}}
+      <br />
+      <b>Year:</b> {{car.year}}
+      <br />
+      <b>Transmission:</b> {{car.transmission}}
+      <br />
+      <b>Color:</b> {{car.color}}
+      <br />
+      <b>Horse power (hp):</b> {{car.engine_horse_power}}
+      <br />
+      <b>Engine capacity (cc):</b> {{car.engine_capacity}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

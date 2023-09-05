@@ -1,0 +1,126 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Add car</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="addCarForm" (ngSubmit)="onAddCar()">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">License plate</ion-label>
+            <ion-input type="text" formControlName="license_plate"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="addCarForm.get('license_plate')?.invalid && addCarForm.get('license_plate')?.touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add a license plate!</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Brand name</ion-label>
+            <ion-input type="text" formControlName="brand_name"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="addCarForm.get('brand_name')?.invalid && addCarForm.get('brand_name')?.touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add a brand name!</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Model name</ion-label>
+            <ion-input type="text" formControlName="model_name"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="addCarForm.get('model_name')?.invalid && addCarForm.get('model_name')?.touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add a model name!</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Year</ion-label>
+            <ion-input type="text" formControlName="year"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="addCarForm.get('year')?.invalid && addCarForm.get('year')?.touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add a year that the car was manufactured in!</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Transmission</ion-label>
+            <ion-input type="text" formControlName="transmission"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="addCarForm.get('transmission')?.invalid && addCarForm.get('transmission')?.touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add a transmission!</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Color</ion-label>
+            <ion-input type="text" formControlName="color"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="addCarForm.get('color')?.invalid && addCarForm.get('color')?.touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add a color!</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Engine power</ion-label>
+            <ion-input type="text" formControlName="engine_horse_power"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="addCarForm.get('engine_horse_power')?.invalid && addCarForm.get('engine_horse_power')?.touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add engine horse power!</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Engine capacity</ion-label>
+            <ion-input type="text" formControlName="engine_capacity"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="addCarForm.get('engine_capacity')?.invalid && addCarForm.get('engine_capacity')?.touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add engine capcity!</p>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-button type="submit" expand="block" [disabled]="addCarForm.invalid">Add</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

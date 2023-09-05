@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button size="small" color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cars</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <app-car-element *ngFor="let car of cars" [car]="car"></app-car-element>
+  </ion-list>
+</ion-content>

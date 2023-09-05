@@ -1,0 +1,6 @@
+<ion-item>
+  <ion-item [routerLink]="car.id">
+    <ion-label>{{ car.license_plate }}</ion-label>
+  </ion-item>
+  <ion-icon name="trash" slot="end" (click)="openAlert()"></ion-icon>
+</ion-item>

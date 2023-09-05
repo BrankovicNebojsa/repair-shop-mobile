@@ -41,7 +41,7 @@ export class BrandDetailsPage implements OnInit {
     });
   }
 
-  async onEditQuote() {
+  async onEditBrand() {
     const modal = await this.modalCtrl.create({
       component: BrandModalComponent,
       componentProps: {title: 'Edit quote', name: this.brand.name}

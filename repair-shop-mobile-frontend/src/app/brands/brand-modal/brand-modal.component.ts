@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild, } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 
@@ -7,8 +7,6 @@ import { ModalController } from '@ionic/angular';
   templateUrl: './brand-modal.component.html',
   styleUrls: ['./brand-modal.component.scss'],
 })
-
-
 export class BrandModalComponent implements OnInit {
   editBrandForm: FormGroup;
   @Input() title: string = 'Edit brand';

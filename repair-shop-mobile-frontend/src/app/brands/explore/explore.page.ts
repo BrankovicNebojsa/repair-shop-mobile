@@ -16,9 +16,7 @@ export class ExplorePage implements OnInit, OnDestroy {
   constructor(
     private menuCtr: MenuController,
     private brandService: BrandsService
-  ) {
-    // this.brands = this.brandService.brands;
-  }
+  ) {}
 
   ngOnInit() {
     this.brandSub = this.brandService.brands.subscribe((brands) => {
