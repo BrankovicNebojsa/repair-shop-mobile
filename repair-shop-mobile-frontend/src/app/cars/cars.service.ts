@@ -84,8 +84,6 @@ export class CarsService {
     );
   }
 
-  // DO OVDE SAM STAO
-
   getCars() {
     return this.authService.token.pipe(
       take(1),

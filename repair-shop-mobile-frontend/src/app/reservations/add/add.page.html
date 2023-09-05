@@ -1,0 +1,73 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Add reservation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="addReservationForm" (ngSubmit)="onAddReservation()">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Date</ion-label>
+            <ion-input type="text" formControlName="date"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="addReservationForm.get('date')?.invalid && addReservationForm.get('date')?.touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add a date of reservation!</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">License plate</ion-label>
+            <ion-input type="text" formControlName="license_plate"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="addReservationForm.get('license_plate')?.invalid && addReservationForm.get('license_plate')?.touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add a license plate of a car!</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Description</ion-label>
+            <ion-input type="text" formControlName="description"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="addReservationForm.get('description')?.invalid && addReservationForm.get('description')?.touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add a description of service needed!</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Mechanic's name</ion-label>
+            <ion-input type="text" formControlName="mechanic_name"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="addReservationForm.get('mechanic_name')?.invalid && addReservationForm.get('mechanic_name')?.touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p>You must add a name of a mechanic who is going to service the car!</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-button type="submit" expand="block" [disabled]="addReservationForm.invalid">Add</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button size="small" color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Reservations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <app-reservation-element
+      *ngFor="let reservation of reservations"
+      [reservation]="reservation"
+    ></app-reservation-element>
+  </ion-list>
+</ion-content>

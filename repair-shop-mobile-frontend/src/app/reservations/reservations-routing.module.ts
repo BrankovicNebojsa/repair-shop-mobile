@@ -5,9 +5,31 @@ import { ReservationsPage } from './reservations.page';
 
 const routes: Routes = [
   {
+    path: 'tabs',
+    component: ReservationsPage,
+    children: [
+      {
+        path: 'add',
+        loadChildren: () =>
+          import('./add/add.module').then((m) => m.AddPageModule),
+      },
+      {
+        path: 'explore',
+        loadChildren: () =>
+          import('./explore/explore.module').then((m) => m.ExplorePageModule),
+      },
+      {
+        path: '',
+        redirectTo: '/reservations/tabs/explore',
+        pathMatch: 'full',
+      },
+    ],
+  },
+  {
     path: '',
-    component: ReservationsPage
-  }
+    redirectTo: '/reservations/tabs/explore',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

@@ -26,7 +26,6 @@ export class AddPage implements OnInit {
   ngOnInit() {}
 
   onAddCar() {
-    console.log(this.addCarForm.get('name')?.value);
     this.carService
       .addCar(
         this.addCarForm.get('license_plate')?.value,

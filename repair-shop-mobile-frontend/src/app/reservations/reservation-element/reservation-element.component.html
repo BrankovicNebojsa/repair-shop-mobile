@@ -1,0 +1,6 @@
+<ion-item>
+  <ion-item [routerLink]="reservation.id">
+    <ion-label>{{ reservation.date }}</ion-label>
+  </ion-item>
+  <ion-icon name="trash" slot="end" (click)="openAlert()"></ion-icon>
+</ion-item>
