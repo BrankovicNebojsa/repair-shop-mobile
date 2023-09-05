@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: ModelsPage
+  },
+  {
+    path: 'add',
+    loadChildren: () => import('./add/add.module').then( m => m.AddPageModule)
+  },
+  {
+    path: 'explore',
+    loadChildren: () => import('./explore/explore.module').then( m => m.ExplorePageModule)
   }
 ];
 
