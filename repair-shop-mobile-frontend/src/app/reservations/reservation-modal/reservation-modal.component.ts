@@ -1,3 +1,4 @@
+import { format, parseISO } from 'date-fns';
 import { Component, OnInit } from '@angular/core';
 import { Reservation } from '../reservation.model';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -74,7 +75,10 @@ export class ReservationModalComponent implements OnInit {
     this.modalCtrl.dismiss(
       {
         reservationData: {
-          date: this.editReservationForm.get('date')?.value,
+          date: format(
+            parseISO(this.editReservationForm.get('date')?.value),
+            'dd.MM.yyyy HH:mm'
+          ),
           license_plate: this.editReservationForm.get('license_plate')?.value,
           description: this.editReservationForm.get('description')?.value,
           mechanic_name: this.editReservationForm.get('mechanic_name')?.value,

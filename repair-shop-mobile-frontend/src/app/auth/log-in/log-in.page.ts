@@ -36,7 +36,7 @@ export class LogInPage implements OnInit {
       (resData) => {
         console.log('Log in completed!');
         this.isLoading = false;
-        this.router.navigateByUrl('/brands/tabs/explore');
+        this.router.navigateByUrl('/reservations/tabs/explore');
       },
       (errorRes) => {
         console.log(errorRes);

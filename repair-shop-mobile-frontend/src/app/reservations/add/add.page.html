@@ -13,12 +13,20 @@
       <ion-row>
         <ion-col size-sm="3" offset-sm="3">
           <ion-item>
-            <ion-label position="floating">Date</ion-label>
-            <ion-input type="text" formControlName="date"></ion-input>
+            <ion-datetime
+              [showDefaultTitle]="true"
+              minuteValues="0,15,30,45"
+              value="2023-11-09T00:00:00"
+              min="2023-09-05T00:00:00"
+              max="2025-05-31T23:59:59"
+              formControlName="date"
+            ></ion-datetime>
           </ion-item>
         </ion-col>
       </ion-row>
-      <ion-row *ngIf="addReservationForm.get('date')?.invalid && addReservationForm.get('date')?.touched">
+      <ion-row
+        *ngIf="addReservationForm.get('date')?.invalid && addReservationForm.get('date')?.touched"
+      >
         <ion-col size-sm="6" offset-sm="3">
           <p>You must add a date of reservation!</p>
         </ion-col>
@@ -31,7 +39,9 @@
           </ion-item>
         </ion-col>
       </ion-row>
-      <ion-row *ngIf="addReservationForm.get('license_plate')?.invalid && addReservationForm.get('license_plate')?.touched">
+      <ion-row
+        *ngIf="addReservationForm.get('license_plate')?.invalid && addReservationForm.get('license_plate')?.touched"
+      >
         <ion-col size-sm="6" offset-sm="3">
           <p>You must add a license plate of a car!</p>
         </ion-col>
@@ -44,7 +54,9 @@
           </ion-item>
         </ion-col>
       </ion-row>
-      <ion-row *ngIf="addReservationForm.get('description')?.invalid && addReservationForm.get('description')?.touched">
+      <ion-row
+        *ngIf="addReservationForm.get('description')?.invalid && addReservationForm.get('description')?.touched"
+      >
         <ion-col size-sm="6" offset-sm="3">
           <p>You must add a description of service needed!</p>
         </ion-col>
@@ -57,15 +69,24 @@
           </ion-item>
         </ion-col>
       </ion-row>
-      <ion-row *ngIf="addReservationForm.get('mechanic_name')?.invalid && addReservationForm.get('mechanic_name')?.touched">
+      <ion-row
+        *ngIf="addReservationForm.get('mechanic_name')?.invalid && addReservationForm.get('mechanic_name')?.touched"
+      >
         <ion-col size-sm="6" offset-sm="3">
-          <p>You must add a name of a mechanic who is going to service the car!</p>
+          <p>
+            You must add a name of a mechanic who is going to service the car!
+          </p>
         </ion-col>
       </ion-row>
 
       <ion-row>
         <ion-col size-sm="6" offset-sm="3">
-          <ion-button type="submit" expand="block" [disabled]="addReservationForm.invalid">Add</ion-button>
+          <ion-button
+            type="submit"
+            expand="block"
+            [disabled]="addReservationForm.invalid"
+            >Add</ion-button
+          >
         </ion-col>
       </ion-row>
     </ion-grid>

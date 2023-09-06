@@ -1,3 +1,4 @@
+import { format, parseISO } from 'date-fns';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ReservationsService } from '../reservations.service';
@@ -24,7 +25,10 @@ export class AddPage implements OnInit {
   onAddReservation() {
     this.reservationService
       .addReservation(
-        this.addReservationForm.get('date')?.value,
+        format(
+          parseISO(this.addReservationForm.get('date')?.value),
+          'dd.MM.yyyy HH:mm'
+        ),
         this.addReservationForm.get('license_plate')?.value,
         this.addReservationForm.get('description')?.value,
         this.addReservationForm.get('mechanic_name')?.value

@@ -15,8 +15,14 @@
       <ion-row>
         <ion-col size-sm="6" offset-sm="3">
           <ion-item>
-            <ion-label position="floating">Date</ion-label>
-            <ion-input type="text" formControlName="date"></ion-input>
+            <ion-datetime
+              [showDefaultTitle]="true"
+              minuteValues="0,15,30,45"
+              value="2023-11-09T00:00:00"
+              min="2023-09-05T00:00:00"
+              max="2025-05-31T23:59:59"
+              formControlName="date"
+            ></ion-datetime>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -47,7 +53,12 @@
 
       <ion-row>
         <ion-col size="6" offset="3">
-          <ion-button type="submit" expand="block" [disabled]="editReservationForm.invalid">Update reservation</ion-button>
+          <ion-button
+            type="submit"
+            expand="block"
+            [disabled]="editReservationForm.invalid"
+            >Update reservation</ion-button
+          >
         </ion-col>
       </ion-row>
     </ion-grid>
