@@ -23,11 +23,15 @@
           <p>You must add a license plate!</p>
         </ion-col>
       </ion-row>
+
       <ion-row>
         <ion-col size-sm="3" offset-sm="3">
           <ion-item>
-            <ion-label position="floating">Brand name</ion-label>
-            <ion-input type="text" formControlName="brand_name"></ion-input>
+            <ion-select label="Brand name" placeholder="Choose a brand" formControlName="brand_name">
+              <div *ngFor="let brand of brands">
+                <ion-select-option value="{{brand.name}}">{{brand.name}}</ion-select-option>
+              </div>
+            </ion-select>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -36,6 +40,7 @@
           <p>You must add a brand name!</p>
         </ion-col>
       </ion-row>
+
       <ion-row>
         <ion-col size-sm="3" offset-sm="3">
           <ion-item>

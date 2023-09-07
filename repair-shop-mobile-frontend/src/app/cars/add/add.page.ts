@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CarsService } from '../cars.service';
+import { Brand } from 'src/app/brands/brand.model';
+import { BrandsService } from 'src/app/brands/brands.service';
 
 @Component({
   selector: 'app-add',
@@ -8,9 +10,13 @@ import { CarsService } from '../cars.service';
   styleUrls: ['./add.page.scss'],
 })
 export class AddPage implements OnInit {
+  brands: Brand[] = [new Brand('1', 'Audi', '1')];
   addCarForm: FormGroup;
 
-  constructor(private carService: CarsService) {
+  constructor(
+    private carService: CarsService,
+    private brandService: BrandsService
+  ) {
     this.addCarForm = new FormGroup({
       license_plate: new FormControl(null, Validators.required),
       brand_name: new FormControl(null, Validators.required),
@@ -23,8 +29,12 @@ export class AddPage implements OnInit {
     });
   }
 
-  ngOnInit() {}
-
+  ngOnInit(): void {
+    this.brandService.getBrands().subscribe(response => {
+        this.brands = response;
+    });
+  }
+  
   onAddCar() {
     this.carService
       .addCar(

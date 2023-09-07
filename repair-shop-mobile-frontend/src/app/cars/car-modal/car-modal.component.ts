@@ -5,6 +5,8 @@ import { ModalController, NavController } from '@ionic/angular';
 import { CarsService } from '../cars.service';
 import { Car } from '../car.model';
 import { take } from 'rxjs';
+import { Brand } from 'src/app/brands/brand.model';
+import { BrandsService } from 'src/app/brands/brands.service';
 
 @Component({
   selector: 'app-car-modal',
@@ -12,6 +14,7 @@ import { take } from 'rxjs';
   styleUrls: ['./car-modal.component.scss'],
 })
 export class CarModalComponent implements OnInit {
+  brands: Brand[] = [new Brand('1', 'Audi', '1')];
   car: Car;
 
   editCarForm: FormGroup;
@@ -22,7 +25,8 @@ export class CarModalComponent implements OnInit {
     private modalCtrl: ModalController,
     private route: ActivatedRoute,
     private navCtrl: NavController,
-    private carService: CarsService
+    private carService: CarsService,
+    private brandService: BrandsService
   ) {
     this.editCarForm = new FormGroup({
       license_plate: new FormControl(null, [Validators.required]),
@@ -58,6 +62,10 @@ export class CarModalComponent implements OnInit {
       this.carService.getCar(paramMap.get('carId')).subscribe((car) => {
         this.car = car;
       });
+    });
+
+    this.brandService.getBrands().subscribe((response) => {
+      this.brands = response;
     });
   }
 

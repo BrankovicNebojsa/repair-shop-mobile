@@ -22,6 +22,7 @@ export class ExplorePage implements OnInit, OnDestroy {
     this.brandSub = this.brandService.brands.subscribe((brands) => {
       this.brands = brands;
     });
+    console.log(this.brands);
   }
 
   ionViewWillEnter() {
