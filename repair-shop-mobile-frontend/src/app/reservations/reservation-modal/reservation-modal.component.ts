@@ -5,6 +5,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ModalController, NavController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
 import { ReservationsService } from '../reservations.service';
+import { CarsService } from 'src/app/cars/cars.service';
+import { Car } from 'src/app/cars/car.model';
 
 @Component({
   selector: 'app-reservation-modal',
@@ -13,7 +15,7 @@ import { ReservationsService } from '../reservations.service';
 })
 export class ReservationModalComponent implements OnInit {
   reservation: Reservation;
-
+  cars: Car[] = [];
   editReservationForm: FormGroup;
 
   title: string = 'Edit reservation';
@@ -22,7 +24,8 @@ export class ReservationModalComponent implements OnInit {
     private modalCtrl: ModalController,
     private route: ActivatedRoute,
     private navCtrl: NavController,
-    private reservationService: ReservationsService
+    private reservationService: ReservationsService,
+    private carService: CarsService
   ) {
     this.editReservationForm = new FormGroup({
       date: new FormControl(null, [Validators.required]),
@@ -52,6 +55,10 @@ export class ReservationModalComponent implements OnInit {
         .subscribe((reservation) => {
           this.reservation = reservation;
         });
+    });
+
+    this.carService.getCars().subscribe((cars) => {
+      this.cars = cars;
     });
   }
 
