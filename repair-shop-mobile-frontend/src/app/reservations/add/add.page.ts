@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ReservationsService } from '../reservations.service';
 import { Car } from 'src/app/cars/car.model';
 import { CarsService } from 'src/app/cars/cars.service';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-add',
@@ -11,6 +12,7 @@ import { CarsService } from 'src/app/cars/cars.service';
   styleUrls: ['./add.page.scss'],
 })
 export class AddPage implements OnInit {
+  userId: string | null = '';
   addReservationForm: FormGroup;
   cars: Car[] = [
     new Car(
@@ -29,7 +31,8 @@ export class AddPage implements OnInit {
 
   constructor(
     private reservationService: ReservationsService,
-    private carService: CarsService
+    private carService: CarsService,
+    private authService: AuthService
   ) {
     this.addReservationForm = new FormGroup({
       date: new FormControl(null, Validators.required),
@@ -40,6 +43,10 @@ export class AddPage implements OnInit {
   }
 
   ngOnInit() {
+    this.authService.userId.subscribe((userId) => {
+      this.userId = userId;
+    });
+
     this.carService.getCars().subscribe((cars) => {
       this.cars = cars;
     });

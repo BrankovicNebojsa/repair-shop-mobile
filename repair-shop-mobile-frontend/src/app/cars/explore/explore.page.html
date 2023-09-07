@@ -10,6 +10,12 @@
 <ion-content [fullscreen]="true">
 
   <ion-list>
-    <app-car-element *ngFor="let car of cars" [car]="car"></app-car-element>
+    <div *ngFor="let car of cars">
+      <app-car-element
+        *ngIf="car.userId === userId"
+        [car]="car"
+      >
+      </app-car-element>
+    </div>
   </ion-list>
 </ion-content>
