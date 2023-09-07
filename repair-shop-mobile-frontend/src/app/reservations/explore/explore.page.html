@@ -9,9 +9,12 @@
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <app-reservation-element
-      *ngFor="let reservation of reservations"
-      [reservation]="reservation"
-    ></app-reservation-element>
+    <div *ngFor="let reservation of reservations">
+      <app-reservation-element
+        *ngIf="reservation.userId === userId"
+        [reservation]="reservation"
+      >
+      </app-reservation-element>
+    </div>
   </ion-list>
 </ion-content>

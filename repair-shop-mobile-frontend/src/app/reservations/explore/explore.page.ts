@@ -3,6 +3,7 @@ import { Reservation } from '../reservation.model';
 import { Subscription } from 'rxjs';
 import { MenuController } from '@ionic/angular';
 import { ReservationsService } from '../reservations.service';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-explore',
@@ -12,13 +13,19 @@ import { ReservationsService } from '../reservations.service';
 export class ExplorePage implements OnInit {
   reservations: Reservation[] | undefined;
   private reservationsSub: Subscription | undefined;
+  userId: string | null = '';
 
   constructor(
     private menuCtr: MenuController,
-    private reservationService: ReservationsService
+    private reservationService: ReservationsService,
+    private authService: AuthService
   ) {}
 
   ngOnInit() {
+    this.authService.userId.subscribe((userId) => {
+      this.userId = userId;
+    });
+
     this.reservationsSub = this.reservationService.reservations.subscribe(
       (reservations) => {
         this.reservations = reservations;
